@@ -1,6 +1,8 @@
 # template.terraform.aws
 Terraform AWS template.
 
+Each example are inside the `environments` folder.  Each folder contains example spinning up the required infrastructure.  Before deploying any example, start with `environments/example-vpc` to start with a foundational VPC that contains a private/public subnet.
+
 ## Initialization
 
 ```sh
