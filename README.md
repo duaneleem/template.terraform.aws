@@ -13,8 +13,13 @@ terraform init
 ## Troubleshoot Infrastructure
 
 ```sh
-terraform apply
+# Set environment
+export TERRAFORM_EXAMPLE_ENV=dev
 
-terraform show
+terraform plan -var-file=".env.${TERRAFORM_EXAMPLE_ENV}.tfvars"
+
+terraform apply -var-file=".env.${TERRAFORM_EXAMPLE_ENV}.tfvars"
+
+terraform show -var-file=".env.${TERRAFORM_EXAMPLE_ENV}.tfvars"
 
 ```
